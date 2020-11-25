@@ -45,7 +45,7 @@
             <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="#">Health&Fitness</a></li>
-                <li><a href="#">Activewear&Equipment</a></li>
+                <li><a href="{% url 'products' %}">Activewear&Equipment</a></li>
                     {% if request.user.is_authenticated %}
                         <li><a href="#"> My Profile</a></li>
                     {% else %}
