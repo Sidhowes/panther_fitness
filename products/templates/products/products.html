@@ -5,11 +5,11 @@
 <nav class="nav-extended text-shadow black">
             <div class="nav-wrapper">
             <ul>
-                <li><a href="#">Activewear</a></li>
-                <li><a href="#">Equipment</a></li>
-                <li><a href="#">Clearance</a></li>
-                <li><a href="#">Special Offers</a></li>
-                <li><a href="#">New Arrivals</a></li>
+                <li><a href="{% url 'products' %}?category=activewear">Activewear</a></li>
+                <li><a href="{% url 'products' %}?category=equipment">Equipment</a></li>
+                <li><a href="{% url 'products' %}?category=clearance">Clearance</a></li>
+                <li><a href="{% url 'products' %}?category=special_offers">Special Offers</a></li>
+                <li><a href="{% url 'products' %}?category=new_arrivals">New Arrivals</a></li>
                 <li><a href="{% url 'products' %}">All Products</a></li>
             </ul>
             </div>
