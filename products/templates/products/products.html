@@ -25,25 +25,39 @@
 
 {% block content %}
     <div class="overlay"></div>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="product-container">
-                <div class="row"></div>
-                <div class="row">
-                    {% for product in products %}
-						<div class="col s12 m4">
-							<div class="card">
-                                {% if product.image %}
-								    <div class="card-image">
-									<a href="{% url 'product_detail' product.id %}">
+        <div class="container">
+            <div class="row">
+                <div class="col m3">
+                    <h4>Search</h4>
+                    <form method="GET" action="{% url 'products' %}">
+                    <div class="input-group">
+                        <input class="form-control border search-box" type="text" name="q" placeholder="Search our products">
+                        <div class="input-group-append">
+                            <button class="form-control btn border search-btn" type="submit">
+                                    <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                {% for product in products %}
+			        <div class="col s12 m4">
+				        <div class="card">
+                            {% if product.image %}
+								<div class="card-image">
+								    <a href="{% url 'product_detail' product.id %}">
 										<img class="img-products" src="{{ product.image_url }}" alt="{{ product.name }}"/>
 						            </a>
-                                {% else %}
+                            {% else %}
                                     <a href="{% url 'product_detail' product.id %}">
 										<img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}"/>
 						            </a>
                                 {% endif %} 
-							</div>
+						        </div>
 								<div class="card-content">
 									<p>{{ product.name }}</p>
 									<p>£{{ product.price }}</p>
@@ -53,11 +67,9 @@
                                         <small class="text-muted">No Rating</small>
                                     {% endif %}
 								</div>
-							</div>
 						</div>
-                    {% endfor %}
-                </div>
+					</div>
+                {% endfor %}
             </div>
         </div>
-    </div>
 {% endblock %}

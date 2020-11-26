@@ -47,3 +47,29 @@ body {
     padding-right: 10%;
 }
 
+.input-group {
+    display: flex;
+}
+
+.search-btn {
+    background: #B71C1C;
+}
+
+.search-btn:hover {
+    color: #000;
+    background: #B71C1C;
+}
+
+input {
+    background-color: transparent;
+    border: 1px solid #B71C1C;
+    border-radius: 0;
+    outline: none;
+    height: 34px;
+    width: 100%;
+    font-size: 16px;
+    margin: 0 0 8px 0;
+    padding: 0;
+    box-shadow: none;
+    box-sizing: content-box;
+}
