@@ -2,9 +2,23 @@
 {% load static %}
 
 {% block page_header %}
+<nav class="nav-extended text-shadow black">
+            <div class="nav-wrapper">
+            <ul>
+                <li><a href="#">Activewear</a></li>
+                <li><a href="#">Equipment</a></li>
+                <li><a href="#">Clearance</a></li>
+                <li><a href="#">Special Offers</a></li>
+                <li><a href="#">New Arrivals</a></li>
+                <li><a href="{% url 'products' %}">All Products</a></li>
+            </ul>
+            </div>
+        </nav>
     <div class="container">
         <div class="row">
-            <div class="col"></div>
+            <div class="col-12">
+                <h2 class="red-text darken-4 center-align">Products</h2>
+            </div>
         </div>
     </div>
 {% endblock %}
@@ -13,12 +27,7 @@
     <div class="overlay"></div>
     <div class="container-fluid">
         <div class="row">
-            <div class="col">
-                <h2>products</h2>
-            </div>
-        </div>
-        <div class="row">
-            <div class="product-container col-10 offset-1">
+            <div class="product-container">
                 <div class="row"></div>
                 <div class="row">
                     {% for product in products %}
@@ -26,11 +35,11 @@
 							<div class="card">
                                 {% if product.image %}
 								    <div class="card-image">
-									<a href="#">
+									<a href="{% url 'product_detail' product.id %}">
 										<img class="img-products" src="{{ product.image_url }}" alt="{{ product.name }}"/>
 						            </a>
                                 {% else %}
-                                    <a href="#">
+                                    <a href="{% url 'product_detail' product.id %}">
 										<img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}"/>
 						            </a>
                                 {% endif %} 

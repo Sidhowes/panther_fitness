@@ -54,14 +54,14 @@
                  <li>
                     <a class="{% if grand_total %} red-text darken-4 font-weight-bold{% else %}black-text{% endif %}" href="#">
                         <div class="text-center">
-                            <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-                            <p>
+                            <div>
                                 {% if grand_total %}
                                     £{{ grand_total|floatformat:2 }}
                                 {% else %}
                                     £0.00
                                 {% endif %}
-                            </p>
+                                <i class="fas fa-shopping-bag fa-lg"></i>
+                            </div>
                         </div>
                     </a>
                  </li>
@@ -73,7 +73,7 @@
         <ul class="sidenav" id="mobile-demo">
             <li><h4 class="center-align text-shadow red darken-4">Panther Fitness</h4></li>
                 <li><a href="#">Health&Fitness</a></li>
-                <li><a href="#">Activewear&Equipment</a></li>
+                <li><a href="{% url 'products' %}">Activewear&Equipment</a></li>
                     {% if request.user.is_authenticated %}
                         <li><a href="#"> My Profile</a></li>
                     {% else %}
@@ -82,14 +82,13 @@
                 <li>
                     <a class="{% if grand_total %} red-text darken-4 font-weight-bold{% else %}black-text{% endif %}" href="#">
                         <div class="text-center">
-                            <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-                            <p>
-                                {% if grand_total %}
+                            <div>{% if grand_total %}
                                     £{{ grand_total|floatformat:2 }}
                                 {% else %}
                                     £0.00
                                 {% endif %}
-                            </p>
+                                <i class="fas fa-shopping-bag fa-lg"></i>
+                            </div>
                         </div>
                     </a>
                  </li>

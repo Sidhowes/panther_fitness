@@ -25,5 +25,25 @@ body {
     width: 693px;
 }
 
+.container-fluid {
+    padding-left: 10%;
+    padding-right: 10%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
+.arrow-icon {
+    padding-left: 20px;
+    color: #000;
+}
+
+.img-detail {
+    width: 70%;
+}
+
+.product-detail-container {
+    padding-left: 10%;
+    padding-right: 10%;
+}
 
