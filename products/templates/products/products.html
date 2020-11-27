@@ -38,7 +38,22 @@
                             </button>
                         </div>
                     </div>
-                </form>
+                    </form>
+                </div>
+                <div class="col m3 right">
+                <!-- Dropdown Trigger -->
+                    <a class="dropdown-trigger btn sort-btn" href="#" data-target="dropdown1">Sort By:</a>
+
+                <!-- Dropdown Structure -->
+                    <ul id="dropdown1" class="dropdown-content">
+                        <li><a href="{% url 'products' %}?sort=price&direction=asc">Price (low to high)</a></li>
+                        <li><a href="{% url 'products' %}?sort=price&direction=desc">Price (high to low)</a></li>
+                        <li><a href="{% url 'products' %}?sort=rating&direction=asc">Rating (low to high)</a></li>
+                        <li><a href="{% url 'products' %}?sort=rating&direction=desc">Rating (high to low)</a></li>
+                        <li><a href="{% url 'products' %}?sort=category&direction=asc">Category (low to high)</a></li>
+                        <li><a href="{% url 'products' %}?sort=category&direction=desc">Category (high to low)</a></li>
+                        
+                    </ul>
                 </div>
             </div>
         </div>
@@ -72,4 +87,10 @@
                 {% endfor %}
             </div>
         </div>
+{% endblock %}
+
+{% block postloadjs %}
+    <script type="text/javascript">
+            $('.dropdown-trigger').dropdown();
+    </script>
 {% endblock %}

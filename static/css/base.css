@@ -51,13 +51,15 @@ body {
     display: flex;
 }
 
-.search-btn {
-    background: #B71C1C;
+.btn {
+    background-color: #B71C1C;
+    width: 106%;
+    height: 83%;
 }
 
-.search-btn:hover {
+.btn:hover {
     color: #000;
-    background: #B71C1C;
+    background-color: #B71C1C;
 }
 
 input {
@@ -72,4 +74,12 @@ input {
     padding: 0;
     box-shadow: none;
     box-sizing: content-box;
+}
+
+.dropdown-content li>a, .dropdown-content li>span {
+    color: #000;
+}
+
+.sort-btn {
+    margin-top: 67px;
 }
