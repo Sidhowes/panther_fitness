@@ -11,11 +11,14 @@
 
 {% block content %}
     <div class="overlay"></div>
+    <div class="delivery-banner black red-text darken-4 center-align">
+        <h3>Free delivery on orders over £{{ free_delivery_threshold }}!</h3>
+    </div>
     <div class="container">
         <div class="row">
             <div class="col">
                 <hr>
-                <h2 class="red-text darken-4 center-align">Products</h2>
+                <h2 class="red-text darken-4 center-align">Shopping Cart</h2>
                 <hr>
             </div>
         </div>
@@ -25,7 +28,7 @@
                 {% if cart_items %}
                     <div class="table-resonsive rounded"></div>
                 {% else %}
-                    <p class="car-empty"></p>
+                    <p class="car-empty">Your cart is empty</p>
                     <a href="{% url 'products' %}" class="arrow-icon">
                         <i class="fas fa-arrow-left">Back to shopping</i>
                     </a>
