@@ -41,6 +41,13 @@
                     {% endif %}
                 </p>
                 <p>{{ product.description }}</p>
+                {% if product.category %}
+                <p class="cat-tag">
+                    <a class="text-muted black-text" href="{% url 'products' %}?category={{ product.category.name }}">
+                        <i class="fas fa-tag"></i>{{ product.category.friendly_name }}
+                    </a>
+                </p>
+                {% endif %}
                 <h4>£{{ product.price }}</h4>
             </div>
         </div>
