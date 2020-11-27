@@ -83,3 +83,7 @@ input {
 .sort-btn {
     margin-top: 67px;
 }
+
+.btn-cart {
+    width: 75%;
+}
