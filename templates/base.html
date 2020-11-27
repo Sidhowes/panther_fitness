@@ -52,15 +52,15 @@
                         <li><a href="{% url 'account_login' %}">Sign In</a></li>
                     {% endif %}
                  <li>
-                    <a class="{% if grand_total %} red-text darken-4 font-weight-bold{% else %}black-text{% endif %}" href="#">
+                    <a class="{% if grand_total %} red-text darken-4 font-weight-bold{% else %}black-text{% endif %}" href="{% url 'view_cart' %}">
                         <div class="text-center">
                             <div>
+                             <i class="fas fa-shopping-cart fa-lg"></i>
                                 {% if grand_total %}
                                     £{{ grand_total|floatformat:2 }}
                                 {% else %}
                                     £0.00
                                 {% endif %}
-                                <i class="fas fa-shopping-bag fa-lg"></i>
                             </div>
                         </div>
                     </a>
@@ -80,14 +80,15 @@
                         <li><a href="{% url 'account_login' %}">Sign In</a></li>
                     {% endif %}
                 <li>
-                    <a class="{% if grand_total %} red-text darken-4 font-weight-bold{% else %}black-text{% endif %}" href="#">
+                    <a class="{% if grand_total %} red-text darken-4 font-weight-bold{% else %}black-text{% endif %}" href="{% url 'view_cart' %}">
                         <div class="text-center">
-                            <div>{% if grand_total %}
+                            <div>
+                             <i class="fas fa-shopping-cart fa-lg"></i>
+                                {% if grand_total %}
                                     £{{ grand_total|floatformat:2 }}
                                 {% else %}
                                     £0.00
                                 {% endif %}
-                                <i class="fas fa-shopping-bag fa-lg"></i>
                             </div>
                         </div>
                     </a>
