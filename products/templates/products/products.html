@@ -50,9 +50,10 @@
                         <li><a href="{% url 'products' %}?sort=price&direction=desc">Price (high to low)</a></li>
                         <li><a href="{% url 'products' %}?sort=rating&direction=asc">Rating (low to high)</a></li>
                         <li><a href="{% url 'products' %}?sort=rating&direction=desc">Rating (high to low)</a></li>
-                        <li><a href="{% url 'products' %}?sort=category&direction=asc">Category (low to high)</a></li>
-                        <li><a href="{% url 'products' %}?sort=category&direction=desc">Category (high to low)</a></li>
-                        
+                        <li><a href="{% url 'products' %}?sort=name&direction=asc">Name (A-Z)</a></li>
+                        <li><a href="{% url 'products' %}?sort=name&direction=desc">Name (Z-A)</a></li>
+                        <li><a href="{% url 'products' %}?sort=category&direction=asc">Category (A-Z)</a></li>
+                        <li><a href="{% url 'products' %}?sort=category&direction=desc">Category (Z-A)</a></li>
                     </ul>
                 </div>
             </div>
@@ -61,7 +62,7 @@
             <div class="col s12 m3">
                 <p class="text-muted center ">
                     {% if search_term or current_categories or current_sorting != 'None_None' %}
-                        <span class="small"><a href="{% url 'products' %}">All Products</a> | </span>
+                        <span class="small"><a class="red-text darken-4" href="{% url 'products' %}">All Products</a> | </span>
                     {% endif %}
                     {{ products | length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
                 </p>
@@ -103,6 +104,11 @@
 					</div>
                 {% endfor %}
             </div>
+        </div>
+        <div class="fixed-action-btn">
+            <a href="{% url 'products' %}" class="btn-floating btn-large btn">
+                <i class="fas fa-arrow-up"></i>
+            </a>
         </div>
 {% endblock %}
 
