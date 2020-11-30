@@ -52,6 +52,22 @@
                 <form class="form" action="{% url 'add_to_cart' product.id %}" method="POST">
                      {% csrf_token %}
                         <div class="form-row">
+                            {% with product.has_sizes as s %}
+                            {% if s %}
+                                <div class="s12 m4">
+                                    <!-- Dropdown Trigger -->
+                                    <a class="dropdown-trigger btn btn-cart" href="#" name="product_size" id="id_product_size" data-target="dropdown2">Sizes:</a>
+
+                                    <!-- Dropdown Structure -->
+                                    <ul id="dropdown2" class="dropdown-content">
+                                        <li value="xs">XS</li>
+                                        <li value="s">S</li>
+                                        <li value="m">M</li>
+                                        <li value="l">L</li>
+                                        <li value="xl">XL</li>
+                                    </ul>
+                                </div>
+                            {% endif %}
                             <div class="col s12 m4">
                                 <p>Quantity</p>
                                 <div class="form-group">
@@ -64,6 +80,7 @@
                                 <input type="submit" class="btn btn-cart" value="Add to Cart">
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                            {% endwith %}
                         </div>
                 </form>
             </div>
@@ -71,3 +88,10 @@
     </div>
     
 {% endblock %}
+
+{% block postloadjs %}
+    <script type="text/javascript">
+            $('.dropdown-trigger').dropdown();
+    </script>
+{% endblock %}
+
