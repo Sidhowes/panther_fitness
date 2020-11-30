@@ -54,21 +54,18 @@
                         <div class="form-row">
                             {% with product.has_sizes as s %}
                             {% if s %}
-                                <div class="s12 m4">
-                                    <!-- Dropdown Trigger -->
-                                    <a class="dropdown-trigger btn btn-cart" href="#" name="product_size" id="id_product_size" data-target="dropdown2">Sizes:</a>
-
-                                    <!-- Dropdown Structure -->
-                                    <ul id="dropdown2" class="dropdown-content">
-                                        <li value="xs">XS</li>
-                                        <li value="s">S</li>
-                                        <li value="m">M</li>
-                                        <li value="l">L</li>
-                                        <li value="xl">XL</li>
-                                    </ul>
+                                <div class="input-field col s12" style="width: 75%;">
+                                <p>Size:</p>
+                                    <select name="product_size" id="id_product_size">
+                                        <option value="xs">XS</option>
+                                        <option value="s">S</option>
+                                        <option value="m" selected>M</option>
+                                        <option value="l">L</option>
+                                        <option value="xl">XL</option>
+                                    </select>
                                 </div>
                             {% endif %}
-                            <div class="col s12 m4">
+                            <div class="col s12" style="width: 75%;">
                                 <p>Quantity</p>
                                 <div class="form-group">
                                     <div class="input-group">
@@ -91,7 +88,6 @@
 
 {% block postloadjs %}
     <script type="text/javascript">
-            $('.dropdown-trigger').dropdown();
+            $('select').formSelect();
     </script>
 {% endblock %}
-
