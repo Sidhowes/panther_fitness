@@ -153,5 +153,12 @@ input {
     background-color: #ccc;
 }
 
+.cart-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
 
-
+.toast-info {
+    margin: 0;
+}

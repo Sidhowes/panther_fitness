@@ -1,12 +1,50 @@
-<div class="card-panel toast-card red darken-4" data-autohide="false">
-    <div class="toast-header white-text ">success
-    <hr class="white">
+<div class="card-panel toast-card white" data-autohide="false">
+    <div class="toast-header black-text ">Success
+    <hr class="black">
         <button type="button" data-dismiss="toast" aria-label="close"
              class="toast-exit" aria-hidden="true">&times;
         </button>
     </div>
-    <div class="toast-body white-text"
-        show="M.toast">
-            {{ message }}
+    <div class="toast-body black-text" show="M.toast">
+        <div class="row">
+            <div class="col">
+                {{ message }}
+                <hr class="black">
+            </div>
+        </div>
+        {% if grand_total %}
+            <p class="logo-font black-text">Your Cart ({{ product_count }})</p>
+            <div class="cart-notification-wrapper">
+                {% for item in cart_items %}
+                    <div class="row">
+                        <div class="col s3">
+                            <img style="width: 100%;" src="{{ item.product.image_url }}" >
+                        </div>
+                        <div class="col s9">
+                            <p class="toast-info"><strong>{{ item.product.name }}</strong></p>
+                            <p class="toast-info"><small>Sizes: {% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</small></p>
+                            <p class="toast-info text-muted"><small>Qty: {{ item.quantity }}</small></p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="row">
+                <div class="col">
+                    <strong><p class="black-text">
+                        Total{% if free_delivery_delta > 0 %} (Exc. delivery){% endif %}: 
+                        <span class="float-right">${{ total|floatformat:2 }}</span>
+                    </p></strong>
+                    {% if free_delivery_delta > 0 %}
+                        <p class="black shadow-sm red-text text-center">
+                            Spend <strong>${{ free_delivery_delta }}</strong> more to get free next day delivery!
+                        </p>
+                    {% endif %}
+                    <a href="{% url 'view_cart' %}" class="btn ">
+                        <span class="text-uppercase">Go To Secure Checkout</span>
+                            <i class="fas fa-lock"></i>
+                    </a>
+                </div>
+            </div>
+        {% endif %}
     </div>
 </div>
