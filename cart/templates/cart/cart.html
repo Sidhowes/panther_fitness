@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load cart_tools %}
 
 {% block page_header %}
     <div class="container">
@@ -50,7 +51,7 @@
                                         <p >£{{ item.product.price }}</p>
                                     </td>
                                     <td >
-                                        <form class="form update-form" method="POST" action="">
+                                        <form class="form update-form" method="POST" action="{% url 'update_cart' item.item_id %}">
                                             {% csrf_token %}
                                                 <div class="input-field decrement-qty"
                                                     data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
@@ -65,13 +66,13 @@
                                                 <input type="hidden" name="product_size" value="{{ item.size }}">
                                             {% endif %}
                                         </form>
-                                        <a href="" class="update-link red-text darken-4"><small>Update</small></a>
-                                        <a href="" class="remove-item black-text" 
+                                        <a class="update-link red-text darken-4"><small>Update</small></a>
+                                        <a class="remove-item black-text" 
                                             id="remove_{{ item.item_id }}" 
-                                                data-size="{{ item.size }}"><small>Remove</small></a>
+                                                data-product_size="{{ item.size }}"><small>Remove</small></a>
                                     </td>
                                     <td >
-                                        <p >£{{ item.product.price }}</p>
+                                        <p >£{{ item.product.price | calc_subtotal:item.quantity }}</p>
                                     </td>
                                 </tr>
                             {% endfor %}
