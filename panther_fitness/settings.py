@@ -27,7 +27,7 @@ SECRET_KEY = 'dfqr88=uu+wd33wh$ug@45-aau!n#8ubir4$bi(f=7mq&wr#g1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['panther-fitness.heroku.com', 'localhost']
+ALLOWED_HOSTS = ['panther-fitness.herokuapp.com', 'localhost']
 
 
 # Application definition
