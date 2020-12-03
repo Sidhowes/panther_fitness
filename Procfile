@@ -1,0 +1,1 @@
+web: gunicorn panther_fitness.wsgi:application
