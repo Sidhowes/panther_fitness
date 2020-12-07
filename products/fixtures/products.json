@@ -4,13 +4,13 @@
     "model": "products.product",
     "fields": {
       "sku": "pp5001340155",
-      "name": "Sports Bra with company title",
-      "description": "Black sports bra perfect for high energy activites and soft material for a comfortable fit",
+      "name": "Women's Black Sports Bra",
+      "description": "KISSLACE Women's Sports Bra Padded Full Support Wireless High Impact Racerback Yoga Workout Bra Fitness Wire Free Cups for Jogging Exercise",
       "price": 53.99,
       "category": 1,
       "rating": 4.6,
-      "image_url": "https://fe47e08b-0595-4fa3-85e4-6aa22b7a346f.ws-eu01.gitpod.io/mini-browser/workspace/panther_fitness/static/media/black_bra_title.jpg",
-      "image": "black_bra_title.jpg"
+      "image_url": "https://images-na.ssl-images-amazon.com/images/I/61oSsDMM3iL._AC_UY580_.jpg",
+      "image": "black_sports_bra.jpg"
     }
   },
   {
@@ -18,12 +18,12 @@
     "model": "products.product",
     "fields": {
       "sku": "pp5001600425",
-      "name": "Mens black vest",
-      "description": "Black gym vest with badge logo in the center",
-      "price": 58.99,
+      "name": "Mens Black UA Vest",
+      "description": "The tailored cut fits close to the body to show off your bod while the signature Heatgear Sonic fabric keeps you cool and comfortable. An every day workout tank in colors that will stay stylish forever.",
+      "price": 38.99,
       "category": 1,
       "rating": 4.6,
-      "image_url": "data:image/jpeg;base64,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",
+      "image_url": "https://doyoueven.co.uk/wp-content/uploads/2018/03/Gym-clothes-and-activewear-Mens-Under-Armour-Compression-Vest-UA-HeatGear-Sonic-Fitted-Tank-Black-under-armour-1247433-001-1-doyoueven-co-uk.jpg",
       "image": "mens_black_vest.jpg"
     }
   },
@@ -32,13 +32,13 @@
     "model": "products.product",
     "fields": {
       "sku": "pp5001730010",
-      "name": "Women's top with badge",
-      "description": "White womens top with badge in top corner",
-      "price": 205.99,
+      "name": "Women's Nike White Dry Tank Top",
+      "description": "This gym top has a slim, flattering fit with a racerback design that lets you move freely. Made from smooth, sweat-wicking fabric that keeps you dry and finished with a large Swoosh graphic on the chest.",
+      "price": 20.99,
       "category": 1,
       "rating": 4.7,
-      "image_url": "https://fe47e08b-0595-4fa3-85e4-6aa22b7a346f.ws-eu01.gitpod.io/mini-browser/workspace/panther_fitness/static/media/white_logo_badge.jpg",
-      "image": "white_logo_badge.jpg"
+      "image_url": "https://www.lifestylesports.com/dw/image/v2/BCDN_PRD/on/demandware.static/-/Sites-LSS_eCommerce_Master/default/dwa886060d/images/60075600xlarge.jpg?sw=530",
+      "image": "white_nike_women.jpg"
     }
   },
   {
@@ -46,13 +46,13 @@
     "model": "products.product",
     "fields": {
       "sku": "pp5001890157",
-      "name": "Mens white t-shirt",
-      "description": "White mens t-shirt with big logo in the middle",
-      "price": 169.99,
+      "name": "Adidas Striped Jersey",
+      "description": "This men's football jersey is made with sweat-wicking fabric to keep you dry as you improve your skills. The adidas Badge of Sport shows your quality.",
+      "price": 19.99,
       "category": 4,
       "rating": 3,
-      "image_url": "https://fe47e08b-0595-4fa3-85e4-6aa22b7a346f.ws-eu01.gitpod.io/mini-browser/workspace/panther_fitness/static/media/white_tee_logo.jpg",
-      "image": "white_tee_logo.jpg"
+      "image_url": "https://xcdn.next.co.uk/COMMON/Items/Default/Default/ItemImages/Search/224x336/616117.jpg",
+      "image": "mens_white_tshirt.jpg"
     }
   },
   {
@@ -60,13 +60,13 @@
     "model": "products.product",
     "fields": {
       "sku": "pp5002111605",
-      "name": "Panther eyes black tee",
-      "description": "Mens black t-shirt with panther eyes.",
-      "price": 232.99,
+      "name": "UA Black Logo T-shirt",
+      "description": "Under Armour UA BOXED SPORTSTYLE Short Sleeve, Stylish and Comfortable T Shirt for Men, Breathable Gym and Fitness Clothing Men.",
+      "price": 49.99,
       "category": 1,
       "rating": 5,
-      "image_url": "https://fe47e08b-0595-4fa3-85e4-6aa22b7a346f.ws-eu01.gitpod.io/mini-browser/workspace/panther_fitness/static/media/t-shirt_eyes.jpg",
-      "image": "t-shirt_eyes.jpg"
+      "image_url": "https://m.media-amazon.com/images/I/51RKkjGuXbL._SL1000_.jpg",
+      "image": "black_ua_tshirt.jpg"
     }
   },
   {
@@ -74,13 +74,13 @@
     "model": "products.product",
     "fields": {
       "sku": "pp5002260206",
-      "name": "Grey logo hoodie",
-      "description": "Grey comfortable womens hoodie, perfect for excercise outdoors eith the logo on the back.",
+      "name": "Grey UA logo hoodie",
+      "description": "Under Armour French terry overhead training hoody with ColdGear technology. Keeps you warm and dry.",
       "price": 30.99,
       "category": 4,
       "rating": 4.7,
-      "image_url": "https://fe47e08b-0595-4fa3-85e4-6aa22b7a346f.ws-eu01.gitpod.io/mini-browser/workspace/panther_fitness/static/media/grey_hoodie_logo.jpg",
-      "image": "grey_hoodie_logo.jpg"
+      "image_url": "https://resources.mandmdirect.com/Images/_default/u/j/1/uj1629_1_cloudzoom.jpg",
+      "image": "grey_ua_hood.jpg"
     }
   },
   {
@@ -88,13 +88,13 @@
     "model": "products.product",
     "fields": {
       "sku": "pp5002440521",
-      "name": "Khaki Hoodie",
-      "description": "Mens stylish khaki hoodie, ready for winter and outdoor events with the logo on the front.",
+      "name": "Khaki UA Logo Hoodie",
+      "description": "Under Armour Rival Fleece Hoodie For Men, Perfectly Designed For Crossfit & Training.",
       "price": 59,
       "category": 5,
       "rating": 4.4,
-      "image_url": "https://fe47e08b-0595-4fa3-85e4-6aa22b7a346f.ws-eu01.gitpod.io/mini-browser/workspace/panther_fitness/static/media/khaki_hoodie.jpg",
-      "image": "khaki_hoodie.jpg"
+      "image_url": "https://fittest-freakest-res.cloudinary.com/image/upload/c_fill_pad,g_auto,f_auto,q_100,h_800,w_800,b_rgb:f5f5f5/v1/online_store/products/1964/674/13456283315_qrhath.jpg",
+      "image": "khaki_ua_hood.jpg"
     }
   },
   {
@@ -102,13 +102,13 @@
     "model": "products.product",
     "fields": {
       "sku": "pp5002601115",
-      "name": "Red half zip",
-      "description": "Popular womens red half zip up long sleeve top with Panther Fitness title across the front",
+      "name": "Red Nike half zip",
+      "description": "This half-zip top blocks out the cold air with ribbing at the lower sleeves, thumbholes and a low mock-neck. Finished in a coral red colourway for a stylish look.",
       "price": 36.99,
       "category": 1,
       "rating": 4.5,
-      "image_url": "https://fe47e08b-0595-4fa3-85e4-6aa22b7a346f.ws-eu01.gitpod.io/mini-browser/workspace/panther_fitness/static/media/red_zip.jpg",
-      "image": "red_zip.jpg"
+      "image_url": "https://www.lifestylesports.com/dw/image/v2/BCDN_PRD/on/demandware.static/-/Sites-LSS_eCommerce_Master/default/dw6f4f43e6/images/60533060xlarge.jpg?sw=530",
+      "image": "half_zip.jpg"
     }
   },
   {
@@ -116,13 +116,13 @@
     "model": "products.product",
     "fields": {
       "sku": "pp5002690715",
-      "name": "Black mens logo shorts",
-      "description": "Tight yet breathable mens black logo shorts, ideal for the regular gym goer.",
-      "price": 169.99,
+      "name": "Black Mens Double Nike Swoosh Shorts",
+      "description": "Nike HBR Swoosh Shorts in Black. Crafted from soft French terry, these classic comfortable streetwise shorts feature a secure elasticated drawcord waist for a custom fit. Open hand pockets with a back snap pocket and embroidered double Swoosh.",
+      "price": 39.99,
       "category": 3,
       "rating": 4.7,
-      "image_url": "https://fe47e08b-0595-4fa3-85e4-6aa22b7a346f.ws-eu01.gitpod.io/mini-browser/workspace/panther_fitness/static/media/shorts.jpg",
-      "image": "shorts.jpg"
+      "image_url": "https://www.footasylum.com/images/products/medium/4033655.jpg",
+      "image": "black_shorts.jpg"
     }
   },
   {
@@ -130,13 +130,13 @@
     "model": "products.product",
     "fields": {
       "sku": "pp5002701115",
-      "name": "50KG Dumbells",
-      "description": "Great quality 50kg dumbells perfect for home gym.",
+      "name": "Complete Hex Dumbbells Set With Stand",
+      "description": "Designed and built with durability in mind, these HEX dumbbells are a fantastic and unique addition to add to your home gym set. They are an all-body conditioning tool – to assist in building strength, size, and definition, as well as isolating your muscles.",
       "price": 33.99,
       "category": 2,
       "rating": 4.4,
-      "image_url": "https://fe47e08b-0595-4fa3-85e4-6aa22b7a346f.ws-eu01.gitpod.io/mini-browser/workspace/panther_fitness/static/media/dumbell.jpg",
-      "image": "dumbell.jpg"
+      "image_url": "https://www.hygym.co.uk/wp-content/uploads/2020/09/HyGYM-Hex-Dumbbells.jpg",
+      "image": "dumbbell.jpg"
     }
   },
   {
@@ -144,12 +144,12 @@
     "model": "products.product",
     "fields": {
       "sku": "pp5002761055",
-      "name": "Olympic Barbell",
-      "description": "Olympic weight and size 20kg weight lifting barbell.",
-      "price": 29.99,
+      "name": "Olympic Barbell And Stand",
+      "description": "Suitable with two independent, 8 kg heavy and 50 x 51 cm (W x D) Large Standing feet is the Klarfit WS01 lifting table, supports, curl/approx Ideal for stable to store and the available space perfect to use.",
+      "price": 199.99,
       "category": 2,
       "rating": 3,
-      "image_url": "https://fe47e08b-0595-4fa3-85e4-6aa22b7a346f.ws-eu01.gitpod.io/mini-browser/workspace/panther_fitness/static/media/barbell.jpg",
+      "image_url": "https://i.pinimg.com/originals/f6/eb/dd/f6ebddd35d9a40e4c41c0f4c946c2176.jpg",
       "image": "barbell.jpg"
     }
   },
@@ -158,12 +158,12 @@
     "model": "products.product",
     "fields": {
       "sku": "pp5002820069",
-      "name": "Olympic weightlifting plates",
-      "description": "Olympic set of weightlifitng plates 10kg-50kg",
-      "price": 19.99,
+      "name": "Olympic Weightlifting Plate Set",
+      "description": "Made from solid Virgin Rubber with 2 inch Galvanised Steel inners for durability, these long lasting, high quality plates are extensively tested and designed to take whatever you can throw at them, whilst their bright colours and bold writing make their weights easily identifiable and brightens up any gym or CrossFit Box!",
+      "price": 99.99,
       "category":3,
       "rating": 4.6,
-      "image_url": "https://fe47e08b-0595-4fa3-85e4-6aa22b7a346f.ws-eu01.gitpod.io/mini-browser/workspace/panther_fitness/static/media/plates.jpg",
+      "image_url": "https://cdn.shopify.com/s/files/1/1101/0228/products/Bison-Colour-Olympic-Lifting-Bumper-Plate-150kg-Set_700_600_6Y0G9_9e39ede4-a9ce-4aac-96eb-0d7bf2c09378_700x322.jpg?v=1580390482",
       "image": "plates.jpg"
     }
   },
@@ -173,12 +173,12 @@
     "fields": {
       "sku": "pp5002820147",
       "name": "Rowing Machine",
-      "description": "Top of the range rowing machine with 10 levels of difficulty which also tracks calories and distance in meters.",
-      "price": 20,
+      "description": "Packed with features to provide detailed workout feedback and performance monitoring. It includes 25 profile programmes including target heart rate workouts, intervals, fitness tests and more. The LCD display gives various readouts and graphical displays, making sure the user has data on time, stroke rate, distance, heart rate, resistance levels and 500m/pace.",
+      "price": 320,
       "category": 2,
       "rating": 3.2,
-      "image_url": "https://fe47e08b-0595-4fa3-85e4-6aa22b7a346f.ws-eu01.gitpod.io/mini-browser/workspace/panther_fitness/static/media/rowing_machine.jpg",
-      "image": "rowing_machine.jpg"
+      "image_url": "https://www.continentalsports.co.uk/media/catalog/product/cache/image/700x700/e9c3970ab036de70892d86c6d221abfe/o/r/origin_or1__0002_img_9947_1_.jpg",
+      "image": "rowing.jpg"
     }
   },
   {
@@ -187,12 +187,12 @@
     "fields": {
       "sku": "pp5002910572",
       "name": "Running Machine",
-      "description": "Brand new running machine from the 2020 series that can also track your heartrate",
-      "price": 26.99,
+      "description": "Like running on air burns up to 30% more calories than a motorized treadmill. Easy on the environment runs on your energy with zero electrical consumption",
+      "price": 699.99,
       "category": 4,
       "rating": 4.7,
-      "image_url": "https://fe47e08b-0595-4fa3-85e4-6aa22b7a346f.ws-eu01.gitpod.io/mini-browser/workspace/panther_fitness/static/media/running_machine.jpg",
-      "image": "running_machine.jpg"
+      "image_url": "https://images-na.ssl-images-amazon.com/images/I/71%2BxKyGMOgL._AC_SL1500_.jpg",
+      "image": "running.jpg"
     }
   },
   {
@@ -202,10 +202,10 @@
       "sku": "pp5002990740",
       "name": "Ski Erg",
       "description": "Crossfit style machine, great for a cardio workout.",
-      "price": 48.99,
+      "price": 749.99,
       "category": 5,
       "rating": 4.8,
-      "image_url": "https://fe47e08b-0595-4fa3-85e4-6aa22b7a346f.ws-eu01.gitpod.io/mini-browser/workspace/panther_fitness/static/media/ski.jpg",
+      "image_url": "https://resources.sport-tiedje.com/bilder/concept2/skierg/PM5/SkiErg_Josh_Double_new_600.jpg",
       "image": "ski.jpg"
     }
   },
@@ -216,11 +216,11 @@
       "sku": "pp5003050248",
       "name": "Assault AirBike",
       "description": "Crossfit styled machine, great for cardio as this machine works your arms at the same time as your legs are pedalling.",
-      "price": 65.99,
+      "price": 849.99,
       "category": 5,
       "rating": 4.4,
-      "image_url": "https://fe47e08b-0595-4fa3-85e4-6aa22b7a346f.ws-eu01.gitpod.io/mini-browser/workspace/panther_fitness/static/media/assault_bike.jpg",
-      "image": "assault_bike.jpg"
+      "image_url": "https://www.indoorsportservices.co.uk/media/catalog/product/cache/3a98a4162412728c73f86773d1bf7322/a/b/ab1.jpg",
+      "image": "bike.jpg"
     }
   }
 ]
