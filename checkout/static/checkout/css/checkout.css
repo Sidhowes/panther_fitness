@@ -24,3 +24,7 @@
 .stripe-style-input::placeholder {
     color: #aab7c4;
 }
+
+.order-confirmation {
+    width: 125%;
+}
