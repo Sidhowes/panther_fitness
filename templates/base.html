@@ -49,8 +49,10 @@
                 <li><a href="#">Health&Fitness</a></li>
                 <li><a href="{% url 'products' %}">Activewear&Equipment</a></li>
                     {% if request.user.is_authenticated %}
-                        <li><a href="#"> My Profile</a></li>
+                        <li><a href="{% url 'profile' %}">My Profile</a></li>
+                        <li><a href="{% url 'account_logout' %}">Logout</a></li>
                     {% else %}
+                        <li><a href="{% url 'account_signup' %}">Register</a></li>
                         <li><a href="{% url 'account_login' %}">Sign In</a></li>
                     {% endif %}
                  <li>
