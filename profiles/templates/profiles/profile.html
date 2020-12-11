@@ -24,7 +24,43 @@
         <div class="row card-panel">
             <div class="col s12 m6">
                 <p><small>Order History</small></p>
-                {{ orders }}
+                <div class="table-resonsive order-history">
+                        <table class="table">
+                            <thead class="text-black">
+                                <tr>
+                                    <th>Order Number</th>
+                                    <th>Date</th>
+                                    <th>Items</th>
+                                    <th>Order Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for order in orders %}
+                                <tr>
+                                    <td>
+                                        <a href="{% url 'order_history' order.order_number %}"
+                                        title="{{ order.order_number }}">
+                                            {{ order.order_number|truncatechars:6 }}
+                                        </a>
+                                    </td>
+                                    <td><small>{{ order.date }}</small></td>
+                                    <td>
+                                        <ul class="list-unstyled">
+                                            {% for item in order.lineitems.all %}
+                                                <li><small>
+                                                    {% if item.product.has_sizes %}
+                                                        Size {{ item.product.size|upper }}
+                                                    {% endif %}{{ item.product.name }} x{{ item.quantity }}
+                                                </small></li>
+                                            {% endfor %}
+                                        </ul>
+                                    </td>
+                                    <td><small>${{ order.grand_total }}</small></td>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                </div>      
             </div>
             <div class="col s12 m6">
                 <p><small>Default Delivery Information</small></p>
