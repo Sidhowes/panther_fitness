@@ -60,6 +60,15 @@ body {
     background-color: #B71C1C;
 }
 
+.btn-black {
+    background-color: #000;
+}
+
+.btn-black:hover {
+    color: #B71C1C;
+    background-color: #000;
+}
+
 input {
     background-color: transparent;
     border: 1px solid #B71C1C;
