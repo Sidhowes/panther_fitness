@@ -21,6 +21,19 @@
                 <h2 class="red-text darken-4 center-align">My Profile</h2>
             </div>
         </div>
-        {{ profile }}
+        <div class="row card-panel">
+            <div class="col s12 m6">
+                <p><small>Order History</small></p>
+                {{ orders }}
+            </div>
+            <div class="col s12 m6">
+                <p><small>Default Delivery Information</small></p>
+                <form style="margin-top: 3px;" action="{% url 'profile' %}" method="POST" id="profile-update-form">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    <button class="btn right text-uppercase">Update Information</button>
+                </form>
+            </div>
+        </div>
 {% endblock %}
 
