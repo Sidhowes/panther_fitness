@@ -41,6 +41,10 @@ body {
     width: 70%;
 }
 
+.img-cart {
+    width: 50%;
+}
+
 .product-detail-container {
     padding-left: 10%;
     padding-right: 10%;
@@ -172,10 +176,6 @@ input[name='q']::placeholder {
 
 .toast-info {
     margin: 0;
-}
-
-img {
-    height: 20%;
 }
 
 /* Allauth form formatting */

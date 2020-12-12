@@ -42,7 +42,7 @@
                         <div class="col s2" style="margin-bottom: 1px;">
                             <a href="{% url 'product_detail' item.product.id %}">
                                 {% if item.product.image %}
-                                    <img style="width: 100%;" src="{{ item.product.image_url }}" alt="{{ product.name }}">
+                                    <img style="width: 100%;" src="{{ item.product.image.url }}" alt="{{ product.name }}">
                                 {% else %}
                                     <img style="width: 100%;" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                                 {% endif %}
@@ -77,12 +77,12 @@
                 <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                     {% csrf_token %}
                     <fieldset class="rounded">
-                        <legend class="fieldset-label small black-text" style="pading-left: 2px; padding-right: 2px; width: auto;">Details</legend>
+                        <legend class="fieldset-label small black-text" style="padding-left: 2px; padding-right: 2px; width: auto;">Details</legend>
                         {{ order_form.full_name | as_crispy_field }}
                         {{ order_form.email | as_crispy_field }}
                     </fieldset>
                     <fieldset class="rounded">
-                        <legend class="fieldset-label small black-text" style="pading-left: 2px; padding-right: 2px; width: auto;">Delivery</legend>
+                        <legend class="fieldset-label small black-text" style="padding-left: 2px; padding-right: 2px; width: auto;">Delivery</legend>
                         {{ order_form.phone_number | as_crispy_field }}
                         {{ order_form.country | as_crispy_field }}
                         {{ order_form.street_address1 | as_crispy_field }}
