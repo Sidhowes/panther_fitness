@@ -31,6 +31,12 @@
 				    </a>
                 {% endif %} 
             </div>
+            {% if request.user.is_superuser %}
+                <small style="padding-left: 10px;">
+                    <a class="black-text" href="{% url 'edit_product' product.id %}">Edit</a> | 
+                    <a class="red-text" href="{% url 'delete_product' product.id %}">Delete</a>
+                </small>
+            {% endif %}
             <div class="col m5">
                 <h3 class="black-text darken-4">{{ product.name }}</h3>
                 <p>
