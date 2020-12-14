@@ -76,7 +76,7 @@
                 <p> Please fill out the form below to complete order.</p>
                 <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                     {% csrf_token %}
-                    <fieldset class="rounded">
+                    <fieldset>
                         <legend class="fieldset-label small black-text" style="padding-left: 2px; padding-right: 2px; width: auto;">Details</legend>
                         {{ order_form.full_name | as_crispy_field }}
                         {{ order_form.email | as_crispy_field }}
@@ -93,7 +93,7 @@
                         <div class="form-check form-check-inline float-right" style="margin-right: 0px;">
                             {% if user.is_authenticated %}
                                 <label for="id-save-info" class="form-check-label">Save this delivery information to my profile</label>
-                                <input type="checkbox" class="form-check-input" style="margin-left: 2px; margin-right: 0px;" id="id-save-info" name="save-info" checked>
+                                <input type="checkbox" class="form-check-input" style="margin-left: 2px; margin-right: 0px;" id="id-save-info" name="save-info" checked></label>
                             {% else %}
                                 <label for="id-save-info" class="form-check-label">
                                     <a href="{% url 'account_signup' %}" class="text-info">Create an account</a> or
@@ -102,8 +102,8 @@
                             {% endif %}
                         </div>
                     </fieldset>
-                    <fieldset class="card-details" style="pading-left: 2px; padding-right: 2px;">
-                        <legend class="fieldset-label small black-text" style="pading-left: 2px; padding-right: 2px; width: auto;">Payment</legend>
+                    <fieldset class="card-details" style="padding-left: 2px; padding-right: 2px;">
+                        <legend class="fieldset-label small black-text" style="padding-left: 2px; padding-right: 2px; width: auto;">Payment</legend>
                         <!--stripe card-->
                         <div style="margin-bottom: 3px;" id="card-element"></div>
                         <!--display form errors-->
