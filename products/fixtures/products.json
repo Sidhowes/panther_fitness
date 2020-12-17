@@ -51,8 +51,8 @@
       "price": 19.99,
       "category": 4,
       "rating": 3,
-      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeSkw8hVD5N6ev8XQRGN6TDN8JsnJlhLxvVA0ke1MW9aq3xhmgsNybhvWjsfCyiJEF7JzH9rw&usqp=CAc",
-      "image": "mens_white_tshirt1.jpg"
+      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3KR09BJu_xM9cfWV1lIz2dLLJ7OYV-ksPOhYo-IQgw8N0LT1VlWWX6k9v0k13aHCABr4d2Ugh&usqp=CAc",
+      "image": "white_tshirt1.jpeg"
     }
   },
   {
@@ -219,8 +219,8 @@
       "price": 849.99,
       "category": 5,
       "rating": 4.4,
-      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuAVaX97xRFccg2_Lrs1yvis2pgsD-Xsa6AmpXzl7EP__cjJz8KdhNm4Qj6WNZ6CZ35wUd9TM&usqp=CAc",
-      "image": "bike1.jpg"
+      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIz_eixYBi8wnsEaLS4C-cC8akXJp8dSZbIQ&usqp=CAU",
+      "image": "air_bike.jpeg"
     }
   }
 ]
