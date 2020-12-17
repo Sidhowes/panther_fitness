@@ -5,12 +5,12 @@
 <nav class="nav-extended text-shadow black">
             <div class="nav-wrapper">
             <ul>
+                <li><a href="{% url 'products' %}">All Products</a></li>
                 <li><a href="{% url 'products' %}?category=activewear">Activewear</a></li>
                 <li><a href="{% url 'products' %}?category=equipment">Equipment</a></li>
                 <li><a href="{% url 'products' %}?category=clearance">Clearance</a></li>
                 <li><a href="{% url 'products' %}?category=special_offers">Special Offers</a></li>
                 <li><a href="{% url 'products' %}?category=new_arrivals">New Arrivals</a></li>
-                <li><a href="{% url 'products' %}">All Products</a></li>
             </ul>
             </div>
         </nav>
@@ -85,8 +85,8 @@
                                 {% endif %} 
 						        </div>
 								<div class="card-content">
-									<p>{{ product.name }}</p>
-									<p>£{{ product.price }}</p>
+									<p style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" >{{ product.name }}</p>
+									<p style="font-size: 30px;">£{{ product.price }}</p>
                                     {% if product.rating %}
                                         <small class="text-muted"><i class="fas fa-star"></i>{{ product.rating }} / 5</small>
                                     {% else %}

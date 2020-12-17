@@ -24,6 +24,10 @@ body {
     height: 275px;
 }
 
+.card .card-image img {
+    object-fit: cover;
+}
+
 .container-fluid {
     padding-left: 10%;
     padding-right: 10%;
