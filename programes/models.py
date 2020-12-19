@@ -13,6 +13,8 @@ class Programe(models.Model):
     def __str__(self):
         return self.title
 
+    def get_absolute_url(self):
+        return reverse('programes:detail', kwargs={'slug': self.slug})
 
 class Lesson(models.Model):
     slug = models.SlugField()
