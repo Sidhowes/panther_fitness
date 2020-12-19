@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'checkout',
     'profiles',
     'memberships',
+    'programes',
 
     # other
     'materialize',
