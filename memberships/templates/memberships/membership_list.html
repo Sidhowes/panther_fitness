@@ -26,7 +26,7 @@
                         {% endfor %}</h4>
                     <p>price: £{{ object.monthly_price }}<small>/month</small></p>
                     {% if object.membership_type != 'Beginner' %}
-                    <form method="POST" action="">
+                    <form method="POST" action="{% url 'memberships:select' %}">
                         {% csrf_token %}
                         {% if object.membership_type != current_membership %}
                             <button class="btn">Select</button>
