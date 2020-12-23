@@ -64,13 +64,16 @@ class MembershipSelectView(ListView):
         request.session['selected_membership_type'] = selected_membership.membership_type
 
         return HttpResponseRedirect(reverse('memberships:payment'))
-
+        
 
 def PaymentView(request):
 
     user_membership = get_user_membership(request)
 
     selected_membership = get_selected_membership(request)
+
+    print(user_membership)
+    print(selected_membership)
 
     publicKey = settings.STRIPE_PUBLIC_KEY
 
