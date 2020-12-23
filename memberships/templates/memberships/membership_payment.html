@@ -33,6 +33,7 @@
         <div id="collapseStripe" class="wrapper">
         
             <!-- <script src="{% static 'js/stripeV3.js' %}"></script> -->
+            
         
             <form action="." method="POST" id="payment-form">
                 {% csrf_token %}
@@ -69,7 +70,7 @@
 {% block postloadjs %}
 <!-- script for the stripe form -->
 <script src="{% static 'memberships/js/membership_payment.js' %}"></script>
-
+<script src="https://js.stripe.com/v2/"></script>
 
 <!-- script for toggling display of the form -->
 <script type="text/javascript">
