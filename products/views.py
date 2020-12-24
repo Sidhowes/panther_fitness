@@ -6,8 +6,19 @@ from django.db.models.functions import Lower
 
 from .models import Product, Category
 from .forms import ProductForm
-
+from profiles.models import UserProfile
 # Create your views here.
+
+
+def check_user(request):
+    """ check if user has fitness programme """
+
+    if request.user.is_authenticated:
+        profile = get_object_or_404(UserProfile, user=request.user)
+        has_programme = profile.has_programme
+        return has_programme
+    else:
+        return 'AnonymousUser'
 
 
 def all_products(request):

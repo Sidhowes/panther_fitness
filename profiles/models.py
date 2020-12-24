@@ -11,6 +11,14 @@ class UserProfile(models.Model):
     A user profile model for maintaining default
     delivery information and order history
     """
+    class Meta:
+        verbose_name_plural = 'Profiles'
+
+    BOOL_CHOICES = (
+        (True, 'Yes'),
+        (False, 'No')
+    )
+
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     default_phone_number = models.CharField(max_length=20, null=True, blank=True)
     default_street_address1 = models.CharField(max_length=80, null=True, blank=True)
@@ -19,6 +27,7 @@ class UserProfile(models.Model):
     default_postcode = models.CharField(max_length=20, null=True, blank=True)
     default_county = models.CharField(max_length=80, null=True, blank=True)
     default_country = CountryField(blank_label='Country', null=True, blank=True)
+    has_programme = models.BooleanField(choices=BOOL_CHOICES, default=False)
 
     def __str__(self):
         return self.user.username
