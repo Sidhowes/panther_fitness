@@ -48,6 +48,8 @@ INSTALLED_APPS = [
     'cart',
     'checkout',
     'profiles',
+    'subscriptions',
+    'fitness',
 
     # other
     'materialize',
