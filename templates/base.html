@@ -46,7 +46,7 @@
             </a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
             <ul class="right hide-on-med-and-down">
-                <li><a href="/memberships">Memberships</a></li>
+                <li><a href="{% url 'subscription_programme' %}">Fitness</a></li>
                 <li><a href="{% url 'products' %}">Shop</a></li>
                     {% if request.user.is_authenticated %}
                         {% if request.user.is_superuser %}
