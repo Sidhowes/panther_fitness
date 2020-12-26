@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
+from cart.contexts import cart_contents
 
 from .models import Product, Category
 from .forms import ProductForm
@@ -29,6 +30,7 @@ def all_products(request):
     categories = None
     sort = None
     direction = None
+    anon_message = "Register to buy Fitness Programme"
 
     if request.GET:
         if 'sort' in request.GET:
@@ -63,6 +65,7 @@ def all_products(request):
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
 
+    has_programme =check_user(request)
     current_sorting = f'{sort}_{direction}'
 
     context = {
@@ -70,6 +73,8 @@ def all_products(request):
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
+        'has_programme': has_programme,
+        'anon_message': anon_message,
     }
 
     return render(request, 'products/products.html', context)
@@ -80,9 +85,18 @@ def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
 
+    current_cart = cart_contents(request)
+    cart_items = current_cart['cart_items']
+    fitness_in_cart = False
+
+    for item in cart_items:
+        if item["product_id"] == str(product_id):
+            fitness_in_cart = True
+
 
     context = {
         'product': product,
+        'fitness_in_cart': fitness_in_cart,
     }
 
     return render(request, 'products/product_detail.html', context)

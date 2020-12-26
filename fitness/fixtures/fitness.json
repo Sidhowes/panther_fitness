@@ -1,0 +1,87 @@
+[
+  {
+    "pk": 1,
+    "model": "fitness.fitness",
+    "plan_name": "1 Month",
+    "fields": {
+      "week": 1,
+      "day": 1,
+      "body_type": "CHEST",
+      "description": "Buliding a more defined and stronger chest",
+      "video_url": "#"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "fitness.fitness",
+    "plan_name": "1 Month",
+    "fields": {
+      "week": 1,
+      "day": 2,
+      "body_type": "SHOULDERS",
+      "description": "Bulk and boulder up your shoulders , this workout will give you a serious pump.",
+      "video_url": "#"
+    }
+  },
+  {
+    "pk": 3,
+    "model": "fitness.fitness",
+    "plan_name": "1 Month",
+    "fields": {
+      "week": 1,
+      "day": 3,
+      "body_type": "BACK",
+      "description": "This workout will give you that cobra looking definition on your back",
+      "video_url": "#"
+    }
+  },
+  {
+    "pk": 4,
+    "model": "fitness.fitness",
+    "plan_name": "1 Month",
+    "fields": {
+      "week": 1,
+      "day": 4,
+      "body_type": "ARMS",
+      "description": "This bicep and tricep workout will give you the pump you need to strengthen and define your arms. ",
+      "video_url": "#"
+    }
+  },
+  {
+    "pk": 5,
+    "model": "fitness.fitness",
+    "plan_name": "1 Month",
+    "fields": {
+      "week": 1,
+      "day": 5,
+      "body_type": "LEGS",
+      "description": "Must not forget leg day as most of your testosterone runs through yur legs.",
+      "video_url": "#"
+    }
+  },
+  {
+    "pk": 6,
+    "model": "fitness.fitness",
+    "plan_name": "1 Month",
+    "fields": {
+      "week": 1,
+      "day": 6,
+      "body_type": "CARDIO",
+      "description": "Cardio fitness is just as important as strength training and this workout will get your heart rate racing.",
+      "video_url": "#"
+    }
+  },
+  {
+    "pk": 7,
+    "model": "fitness.fitness",
+    "plan_name": "1 Month",
+    "fields": {
+      "week": 1,
+      "day": 7,
+      "body_type": "STRETCH",
+      "description": "After a weeks worth of training it is important to rest and stretch out your body",
+      "video_url": "#"
+    }
+  }
+]
+  

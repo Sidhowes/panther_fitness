@@ -4,10 +4,11 @@ from django.contrib.auth.decorators import login_required
 
 from .models import Fitness
 
+
 def fitness(request):
     fitness_obj = Fitness.objects.all()
 
-    template = 'fitness/ftness.html'
+    template = 'fitness/fitness.html'
 
     context = {
         'fitness_obj': fitness_obj,
