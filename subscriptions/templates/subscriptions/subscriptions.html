@@ -32,6 +32,9 @@
             {% else %}
               <a class="btn" href="{% url 'products' %}?category=fitness-programme">Buy Fitness Programme</a>
             {% endif %}
+            {% if request.user.is_superuser %}
+                  <a class="btn btn-black" href="{% url 'edit_subscription' programme.id %}">Edit</a>
+            {% endif %}
         </div>
 {% endblock %}
 

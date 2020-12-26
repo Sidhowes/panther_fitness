@@ -17,7 +17,7 @@ def fitness(request):
     return render(request, template, context)
 
 
-def get_fitness_id(request, nutrition_id):
+def get_fitness_id(request, fitness_id):
     fitness_id = get_object_or_404(Fitness, pk=fitness_id)
     context = {
         'fitness_id': fitness_id,
