@@ -1,8 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from fitness.views import fitness
-from products.views import check_user
+from lessons.views import lesson
 from .models import UserProfile
 from .forms import UserProfileForm
 
@@ -25,14 +24,11 @@ def profile(request):
         form = UserProfileForm(instance=profile)
     orders = profile.orders.all()
 
-    fitness(request)
-    has_programme = check_user(request)
 
     template = 'profiles/profile.html'
     context = {
         'form': form,
         'orders': orders,
-        'has_programme': has_programme,
         'on_profile_page': True
     }
 

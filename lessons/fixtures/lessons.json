@@ -1,0 +1,20 @@
+[
+  {
+    "pk": 1,
+    "model": "lessons.lesson",
+    "plan_name": "1 Month",
+    "fields": {
+      "week": 1,
+      "day_1": "Chest - Press ups, bench press and cable flys",
+      "day_2": "Back - Weughted row, barbell row and lat pull down",
+      "day_3": "Legs - Font squat, back squat andcalf raises",
+      "day_4": "Shoulders - Shoulder press, handstand press ups and straight arm raises",
+      "day_5": "Arms - Bicep curl, Tripcep curl and tricep",
+      "day_6": "Cardio - 1 minute run, 1 minute skip and 1 minute row 3 times",
+      "day_7": "Stretch and recovery - Recover body and stretch out the muscles",
+      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvXHpnvfJ7nNmnX8MxjHeXeYYUjRCyJo07uA&usqp=CAU",
+      "image": "pressups.jpeg"
+    }
+  }
+]
+  

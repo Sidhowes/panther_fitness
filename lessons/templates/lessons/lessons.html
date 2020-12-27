@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="red-text darken-4 center-align">Fitness Lesson</h2>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+        <div class="container">
+            <div class="row card-panel">
+               {% for lesson in lessons %}
+                    <div class="col s12">
+                        <div>
+                            {% if lesson.image %}
+                            <div class="card-image-fit">
+                                <img class="img-fit" src="{{ lesson.image.url }}" alt="{{ lesson.programme_duration }}"/>
+                            {% else %}
+                                <img src="{{ MEDIA_URL }}noimage.png" alt="{{ lesson.programme_duration }}"/>
+                            {% endif %}
+                            </div>
+                            <div class="col s12">
+                                <p>{{ lesson.day_1 }}</p>
+                            </div>
+                            <div class="col s12">
+                                <p>{{ lesson.day_2 }}</p>
+                            </div>
+                            <div class="col s12">
+                                <p>{{ lesson.day_3 }}</p>
+                            </div>
+                            <div class="col s12">
+                                <p>{{ lesson.day_4 }}</p>
+                            </div>
+                            <div class="col s12">
+                                <p>{{ lesson.day_5 }}</p>
+                            </div>
+                            <div class="col s12">
+                                <p>{{ lesson.day_6 }}</p>
+                            </div>
+                            <div class="col s12">
+                                <p>{{ lesson.day_7 }}</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>  
+{% endblock %}

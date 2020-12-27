@@ -14,14 +14,14 @@
     <div class="container">
         <div class="row">
             <div class="col s12 m6">
-                <h2 class="red-text darken-4 center-align">Programme Management</h2>
-                <h5 class="black-text center-align"><small>Edit a Programme</small></h5>
+                <h2 class="red-text darken-4 center-align">Lesson Management</h2>
+                <h5 class="black-text center-align"><small>Edit a Lesson</small></h5>
             </div>
         </div>
 
         <div class="row card-panel">
             <div class="col s12 m6">
-                <form method="POST" action="{% url 'edit_subscription' programme.id %}" style="margin-bottom: 2px;" enctype="multipart/form-data">
+                <form method="POST" action="{% url 'edit_lesson' lesson_id.id %}" style="margin-bottom: 2px;" enctype="multipart/form-data">
                     {% csrf_token %}
                     {% for field in form %}
                         {% if field.name != 'image' %}
@@ -32,7 +32,7 @@
                     {% endfor %}
                     <div class="right">
                         <a href="{% url 'subscription_programme' %}" class="btn text-uppercase">Cancel</a>
-                        <button class="btn btn-black" type="submit">Update Product</button>
+                        <button class="btn btn-black" type="submit">Update Lesson</button>
                     </div>
                 </form>
             </div>

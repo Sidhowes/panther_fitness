@@ -1,0 +1,13 @@
+[
+  {
+    "pk": 1,
+    "model": "subscriptions.programme",
+    "fields": {
+      "programme_duration": "1 Month Subscription",
+      "description": "This Fitness programe is the best chance to become the best version of yourself. With multiple highend trainers coming together to produce this incredible workout programme just for you. Subscribe now.!",
+      "price":  20.00,
+      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSni7FEM2IR9WbCcnemNL5FpZVDTolOqwMVrw&usqp=CAU",
+      "image": "fitness-instructor.jpeg"
+    }
+  }
+]

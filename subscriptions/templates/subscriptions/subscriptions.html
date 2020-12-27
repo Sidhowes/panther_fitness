@@ -17,24 +17,36 @@
                 <h2 class="red-text darken-4 center-align">Fitness Programme</h2>
             </div>
         </div>
-        <div class="row">
-            <div class="col s12">
-                <img src="{% static 'media/fitness-subscribe.jpg' %}">
-            </div>
-            <div class="col s12">
-                <p>Subscribe to our Fitness Programme and watch your body and fitness ransform for the better</p>
-            </div>
-            {% if has_programme == True %}
-              <p><strong>Hi {{user|upper}}, you already purchased the programme.</strong></p>
-              <a class="btn" href="#">See your proramme</a>
-            {% elif has_programme == 'AnonymousUser' %}
-              <a class="btn" href="{% url 'account_signup' %}">Register to Buy</a>
-            {% else %}
-              <a class="btn" href="{% url 'products' %}?category=fitness-programme">Buy Fitness Programme</a>
-            {% endif %}
-            {% if request.user.is_superuser %}
-                  <a class="btn btn-black" href="{% url 'edit_subscription' programme.id %}">Edit</a>
-            {% endif %}
+        <div class="row card-panel">
+            {% for subscription in subscriptions %}
+                <div class="col s12">
+                    <div>
+                        {% if subscription.image %}
+                        <div class="card-image-sub">
+                            <img class="img-sub" src="{{ subscription.image.url }}" alt="{{ subscription.programme_duration }}"/>
+                        {% else %}
+                            <img src="{{ MEDIA_URL }}noimage.png" alt="{{ subscription.programme_duration }}"/>
+                        {% endif %}
+                        </div>
+                        <div class="col s12">
+                            <p>{{ subscription.programme_duration }}</p>
+                        </div>
+                        <div class="col s12">
+                            <p>{{ subscription.description }}</p>
+                        </div>
+                        <div class="col s12">
+                            {% if has_programme == True %}
+                                <p><strong>Hi {{user|upper}}, you already purchased the programme.</strong></p>
+                                <a class="btn" href="{% url 'account_signup' %}">See your proramme</a>
+                            {% elif has_programme == 'AnonymousUser' %}
+                                <a class="btn" href="{% url 'account_signup' %}">Register to Buy</a>
+                            {% else %}
+                                <a class="btn" href="{% url 'products' %}?category=fitness-programme">Buy Fitness Programme</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
         </div>
 {% endblock %}
 

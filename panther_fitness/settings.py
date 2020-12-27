@@ -49,7 +49,7 @@ INSTALLED_APPS = [
     'checkout',
     'profiles',
     'subscriptions',
-    'fitness',
+    'lessons',
 
     # other
     'materialize',
