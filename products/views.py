@@ -3,12 +3,22 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
-
+from cart.contexts import cart_products
 from .models import Product, Category
 from .forms import ProductForm
 from profiles.models import UserProfile
 # Create your views here.
 
+
+def check_user(request):
+    """ check if user has nutrition programme """
+
+    if request.user.is_authenticated:
+        profile = get_object_or_404(UserProfile, user=request.user)
+        has_programme = profile.has_programme
+        return has_programme
+    else:
+        return 'AnonymousUser'
 
 
 def all_products(request):
@@ -19,6 +29,7 @@ def all_products(request):
     categories = None
     sort = None
     direction = None
+    anon_message = 'Register to Buy Fitness Pogramme'
 
 
     if request.GET:
@@ -54,6 +65,8 @@ def all_products(request):
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
 
+    #  check if user has programme
+    has_programme = check_user(request)
     current_sorting = f'{sort}_{direction}'
 
     context = {
@@ -61,6 +74,8 @@ def all_products(request):
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
+        'has_programme': has_programme,
+        'anon_message': anon_message,
     }
 
     return render(request, 'products/products.html', context)
@@ -71,8 +86,17 @@ def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
     
+    current_cart = cart_products(request)
+    cart_items = current_cart['cart_items']
+    lesson_in_programme = False
+
+    for item in cart_items:
+        if item["product_id"] == str(product_id):
+            lesson_in_cart = True
+
     context = {
         'product': product,
+        'lesson_in_cart': lesson_in_cart,
     }
 
     return render(request, 'products/product_detail.html', context)
