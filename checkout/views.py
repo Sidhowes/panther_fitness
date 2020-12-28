@@ -156,7 +156,7 @@ def checkout_success(request, order_number):
 
         current_cart = cart_contents(request)
         cart_items = current_cart['cart_items']
-        user_has_programme = False
+        has_programme = False
         for item in cart_items:
             cat = item['category']
             if str(cat) == 'memberships':

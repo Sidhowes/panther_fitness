@@ -14,8 +14,13 @@ def check_user(request):
     """ check if user has fitness programme """
     if request.user.is_authenticated:
         profile = get_object_or_404(UserProfile, user=request.user)
-        has_programme = profile
-        return has_programme
+        orders = profile.orders.all()
+        for order in orders:
+            line_items = order.lineitems.all()
+            for item in line_items :
+                if item.product.name == 'Fitness Programme':
+                    return True
+        return False
     else:
         return 'AnonymousUser'
 

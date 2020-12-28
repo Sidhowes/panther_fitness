@@ -35,7 +35,7 @@
                             <p>{{ subscription.description }}</p>
                         </div>
                         <div class="col s12">
-                            {% if has_programme == user_has_programme %}
+                            {% if has_programme == True %}
                                 <p><strong>Hi {{user|upper}}, you already purchased the programme.</strong></p>
                                 <a class="btn" href="{% url 'lesson' %}">See your proramme</a>
                             {% elif has_programme == 'AnonymousUser' %}
