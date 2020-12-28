@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .models import Lesson
+from .forms import LessonProgrammeForm
 
 
 def lesson(request):
@@ -15,7 +16,7 @@ def lesson(request):
 
 
 def get_lesson_id(request, fitness_id):
-    lesson_id = get_object_or_404(Lesson, pk=lessons_id)
+    lesson_id = get_object_or_404(Lesson, pk=lesson_id)
     context = {
         'lesson_id': lesson_id,
       }
@@ -30,7 +31,7 @@ def edit_lesson(request, lesson_id):
         messages.error(request, 'Sorry, only store owners can edit a fitness lesson.')
         return redirect(reverse('home'))
 
-    fitness_id = get_object_or_404(Lesson, pk=lesson_id)
+    lesson_id = get_object_or_404(Lesson, pk=lesson_id)
     if request.method == 'POST':
         form = LesssonProgrammeForm(request.POST, request.FILES, instance=lesson_id)
         if form.is_valid():

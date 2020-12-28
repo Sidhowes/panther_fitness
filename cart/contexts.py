@@ -21,6 +21,7 @@ def cart_contents(request):
                 'item_id': item_id,
                 'quantity': item_data,
                 'product': product,
+                'category': category
             })
         else:
             product = get_object_or_404(Product, pk=item_id)
@@ -32,6 +33,7 @@ def cart_contents(request):
                     'quantity': quantity,
                     'product': product,
                     'size': size,
+                    'category': category
                 })
 
     if total < settings.FREE_DELIVERY_THRESHOLD:

@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from lessons.views import lesson
 from .models import UserProfile
+from products.views import check_user
 from .forms import UserProfileForm
 
 from checkout.models import Order
@@ -24,11 +25,15 @@ def profile(request):
         form = UserProfileForm(instance=profile)
     orders = profile.orders.all()
 
+    # call lesson func from lesson.views
+    lesson(request)
+    has_programme = check_user(request)
 
     template = 'profiles/profile.html'
     context = {
         'form': form,
         'orders': orders,
+        'has_programme': has_programme,
         'on_profile_page': True
     }
 
