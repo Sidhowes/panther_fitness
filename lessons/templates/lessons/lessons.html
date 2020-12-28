@@ -60,6 +60,11 @@
                                     <br>
                                 {{ lesson.day_7 }}</p>
                             </div>
+                            {% if request.user.is_superuser %}
+                                <small>
+                                    <a class="black-text" href="{% url 'edit_lesson' lesson.id %}">Edit</a> | 
+                                </small>
+                            {% endif %}
                         </div>
                     </div>
                 {% endfor %}

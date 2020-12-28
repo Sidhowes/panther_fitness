@@ -46,7 +46,7 @@ def edit_lesson(request, lesson_id):
     template = 'lessons/edit_lesson.html'
     context = {
         'form': form,
-        'lesson.id': lesson.id,
+        'lesson_id': lesson_id,
     }
 
     return render(request, template, context)

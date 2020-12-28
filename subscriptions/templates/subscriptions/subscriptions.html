@@ -35,13 +35,13 @@
                             <p>{{ subscription.description }}</p>
                         </div>
                         <div class="col s12">
-                            {% if has_programme == True %}
+                            {% if has_programme == user_has_programme %}
                                 <p><strong>Hi {{user|upper}}, you already purchased the programme.</strong></p>
                                 <a class="btn" href="{% url 'lesson' %}">See your proramme</a>
                             {% elif has_programme == 'AnonymousUser' %}
                                 <a class="btn" href="{% url 'account_signup' %}">Register to Buy</a>
                             {% else %}
-                                <a class="btn" href="{% url 'products' %}?category=fitness-programme">Buy Fitness Programme</a>
+                                <a class="btn" href="{% url 'products' %}?category=memberships">Buy Fitness Programme</a>
                             {% endif %}
                         </div>
                     </div>
