@@ -26,8 +26,8 @@ def profile(request):
     orders = profile.orders.all()
     for order in orders:
         line_items = order.lineitems.all()
-        for item in line_items :
-            print(item.product.name)
+        
+        
 
     # call lesson func from lesson.views
     lesson(request)

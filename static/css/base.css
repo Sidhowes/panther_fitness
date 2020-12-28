@@ -275,6 +275,14 @@ input[name='q']::placeholder {
     border-radius: 0;
 }
 
+.cart-checkout-table {
+    display: none;
+}
+
+.cart-checkout-table1 {
+    display: block;
+}
+
 
 @media only screen and (max-width: 1100px) {
     .card .card-image img {
@@ -306,5 +314,13 @@ input[name='q']::placeholder {
 
     .pro-cat {
         height: 104px;
+    }
+
+    .cart-checkout-table {
+        display: block;
+    }
+
+    .cart-checkout-table1 {
+        display: none;
     }
 }

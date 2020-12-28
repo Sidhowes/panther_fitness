@@ -1,0 +1,21 @@
+<form class="form update-form" method="POST" action="{% url 'update_cart' item.item_id %}">
+    {% csrf_token %}
+        <div class="quantity">
+            <div class="input-field decrement-qty"
+                data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
+            </div>
+            <input class="form-control qty_input" type="number" name="quantity" 
+                value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ item.item_id }}" 
+                    id="id_qty_{{ item.item_id }}">
+            <div class="input-field increment-qty"
+                data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
+            </div>
+        </div>
+    {% if item.product.has_sizes %}
+        <input type="hidden" name="product_size" value="{{ item.size }}">
+    {% endif %}
+    </form>
+    <a class="update-link red-text darken-4"><small>Update</small></a>
+    <a class="remove-item black-text" 
+    id="remove_{{ item.item_id }}" 
+        data-product_size="{{ item.size }}"><small>Remove</small></a>
