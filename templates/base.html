@@ -41,12 +41,12 @@
         <!-- top navbar-->
         <nav class="nav-extended text-shadow red darken-4">
             <div class="nav-wrapper">
-            <a href="{% url 'home' %}" class="brand-logo">
-                <img src="{% static 'media/homepage_logo.jpg' %}" alt="logo/" style="height: 64px; width: 120%; padding-left: 20px;">
+            <a href="{% url 'home' %}">
+                <img class="brand-logo" src="{% static 'media/homepage_logo.jpg' %}" alt="logo/">
             </a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
             <ul class="right hide-on-med-and-down">
-                <li><a href="{% url 'subscription_programme' %}">Fitness</a></li>
+                <li><a href="{% url 'subscription_programme' %}">Fitness Progamme</a></li>
                 <li><a href="{% url 'products' %}">Shop</a></li>
                     {% if request.user.is_authenticated %}
                         {% if request.user.is_superuser %}
@@ -80,11 +80,12 @@
         <!-- mobile side navbar-->
         <ul class="sidenav" id="mobile-demo">
             <li><h4 class="center-align text-shadow red darken-4">Panther Fitness</h4></li>
-                <li><a href="#">Health&Fitness</a></li>
-                <li><a href="{% url 'products' %}">Activewear&Equipment</a></li>
+                <li><a href="{% url 'subscription_programme' %}">Fitness Programme</a></li>
+                <li><a href="{% url 'products' %}">Shop</a></li>
                     {% if request.user.is_authenticated %}
                         {% if request.user.is_superuser %}
                             <li><a href="{% url 'add_product' %}">Product Mangement</a></li>
+                            <li><a href="{% url 'lesson' %}">Programme Mangement</a></li>
                         {% endif %}
                         <li><a href="{% url 'profile' %}">My Profile</a></li>
                         <li><a href="{% url 'account_logout' %}">Logout</a></li>
@@ -141,6 +142,5 @@
             });
         </script>
     {% endblock %}
-    
   </body>
 </html>

@@ -23,7 +23,7 @@
                     <div>
                         {% if subscription.image %}
                         <div class="card-image-sub">
-                            <img class="img-sub" src="{{ subscription.image.url }}" alt="{{ subscription.programme_duration }}"/>
+                            <img class="img-sub" style="width: 100%;" src="{{ subscription.image.url }}" alt="{{ subscription.programme_duration }}"/>
                         {% else %}
                             <img src="{{ MEDIA_URL }}noimage.png" alt="{{ subscription.programme_duration }}"/>
                         {% endif %}
@@ -37,7 +37,7 @@
                         <div class="col s12">
                             {% if has_programme == True %}
                                 <p><strong>Hi {{user|upper}}, you already purchased the programme.</strong></p>
-                                <a class="btn" href="{% url 'account_signup' %}">See your proramme</a>
+                                <a class="btn" href="{% url 'lesson' %}">See your proramme</a>
                             {% elif has_programme == 'AnonymousUser' %}
                                 <a class="btn" href="{% url 'account_signup' %}">Register to Buy</a>
                             {% else %}

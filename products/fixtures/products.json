@@ -222,6 +222,20 @@
       "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIz_eixYBi8wnsEaLS4C-cC8akXJp8dSZbIQ&usqp=CAU",
       "image": "air_bike.jpeg"
     }
+  },
+  {
+    "pk": 17,
+    "model": "products.product",
+    "fields": {
+      "sku": "pp5001340155",
+      "name": "Fitness Programme",
+      "description": "The best fitness programme on the market designed by multiple top end triners.",
+      "price": 20,
+      "category": 6,
+      "rating": 5,
+      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHlB0Z7zUItJQj4r7je9L-TMpS1QmOQ9uEqw&usqp=CAU",
+      "image": "fitness-programme.jpeg"
+    }
   }
 ]
   

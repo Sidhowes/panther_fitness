@@ -2,5 +2,6 @@
  {"pk": 2, "model": "products.category", "fields": {"name": "equipment", "friendly_name": "Equipment"}}, 
  {"pk": 3, "model": "products.category", "fields": {"name": "clearance", "friendly_name": "Clearance"}}, 
  {"pk": 4, "model": "products.category", "fields": {"name": "special_offers", "friendly_name": "Special Offers"}},   
- {"pk": 5, "model": "products.category", "fields": {"name": "new_arrivals", "friendly_name": "New Arrivals"}} 
+ {"pk": 5, "model": "products.category", "fields": {"name": "new_arrivals", "friendly_name": "New Arrivals"}}, 
+ {"pk": 6, "model": "products.category", "fields": {"name": "memberships", "friendly_name": "Memberships"}} 
 ]

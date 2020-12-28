@@ -11,6 +11,18 @@ body {
     font-size: 18px;
 }
 
+nav .brand-logo {
+    position: absolute;
+    color: #fff;
+    display: inline-block;
+    font-size: 2.1rem;
+    padding-left: 20px;
+}
+
+.brand-logo {
+    height: 64px;
+}
+
 .overlay {
     height: 100%;
     width: 100%;
@@ -103,10 +115,6 @@ input {
     width: 75%;
 }
 
-.update-link {
-    padding: 10px;
-}
-
 .select-wrapper input.select-dropdown {
     position: relative;
     cursor: pointer;
@@ -123,6 +131,10 @@ input {
     display: block;
     user-select: none;
     z-index: 1;
+}
+
+.quantity {
+    padding-top: 25px;
 }
 
 .update-link,
@@ -261,4 +273,38 @@ input[name='q']::placeholder {
     background-color: #dc3545;
     border-color: #dc3545;
     border-radius: 0;
+}
+
+
+@media only screen and (max-width: 1100px) {
+    .card .card-image img {
+        object-fit: none;
+    }
+
+    .card .card-content p {
+        margin: 0;
+        overflow: hidden;
+    }
+
+    .quantity {
+        padding-top: 55px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .brand-logo {
+        height: 55px;  
+    }
+
+    .sort-btn {
+        display: flex;
+    }
+
+    .cat {
+        font-size: 12px;
+    }
+
+    .pro-cat {
+        height: 104px;
+    }
 }

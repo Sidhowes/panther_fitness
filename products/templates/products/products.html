@@ -4,13 +4,14 @@
 {% block page_header %}
 <nav class="nav-extended text-shadow black">
             <div class="nav-wrapper">
-            <ul>
-                <li><a href="{% url 'products' %}">All Products</a></li>
-                <li><a href="{% url 'products' %}?category=activewear">Activewear</a></li>
-                <li><a href="{% url 'products' %}?category=equipment">Equipment</a></li>
-                <li><a href="{% url 'products' %}?category=clearance">Clearance</a></li>
-                <li><a href="{% url 'products' %}?category=special_offers">Special Offers</a></li>
-                <li><a href="{% url 'products' %}?category=new_arrivals">New Arrivals</a></li>
+            <ul class="pro-cat">
+                <li><a class="cat" href="{% url 'products' %}">All Products</a></li>
+                <li><a class="cat" href="{% url 'products' %}?category=activewear">Activewear</a></li>
+                <li><a class="cat" href="{% url 'products' %}?category=equipment">Equipment</a></li>
+                <li><a class="cat" href="{% url 'products' %}?category=clearance">Clearance</a></li>
+                <li><a class="cat" href="{% url 'products' %}?category=special_offers">Special Offers</a></li>
+                <li><a class="cat" href="{% url 'products' %}?category=new_arrivals">New Arrivals</a></li>
+                <li><a class="cat" href="{% url 'products' %}?category=memberships">Memberships</a></li>
             </ul>
             </div>
         </nav>
@@ -120,6 +121,7 @@
 
 {% block postloadjs %}
     <script type="text/javascript">
+            $(".sidenav").sidenav({ edge: "right" });
             $('.dropdown-trigger').dropdown();
     </script>
 {% endblock %}
