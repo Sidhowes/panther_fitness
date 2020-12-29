@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background: url('../media/homepage_background.jpg') no-repeat center center fixed;
+    background: url('../media/background-image.jpeg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 200px);
     color: #000000;
@@ -21,6 +21,10 @@ nav .brand-logo {
 
 .brand-logo {
     height: 64px;
+}
+
+.index-text {
+    padding-top: 35%;
 }
 
 .overlay {
@@ -49,7 +53,6 @@ nav .brand-logo {
 }
 
 .arrow-icon {
-    padding-left: 20px;
     color: #000;
 }
 
@@ -283,6 +286,19 @@ input[name='q']::placeholder {
     display: block;
 }
 
+#id_remember {
+    opacity: 1;
+    height: 14px;
+    width: 17px;
+    position: inherit;
+}
+
+#id-save-info {
+    height: 14px;
+    opacity: 1;
+    width: 56px;
+    position: inherit;
+}
 
 @media only screen and (max-width: 1100px) {
     .card .card-image img {
@@ -296,6 +312,21 @@ input[name='q']::placeholder {
 
     .quantity {
         padding-top: 55px;
+    }
+
+    .btn-black {
+        margin-top: 5px;
+    }
+
+    #id-save-info {
+        height: 10px;
+        opacity: 1;
+        width: 30px;
+        position: inherit;
+    }
+
+    .index-text {
+        padding-top: 120%;
     }
 }
 
@@ -322,5 +353,21 @@ input[name='q']::placeholder {
 
     .cart-checkout-table1 {
         display: none;
+    }
+
+    .btn-black {
+        margin-top: 5px;
+    }
+
+    #id-save-info {
+        height: 9px;
+        opacity: 1;
+        width: 10px;
+        position: inherit;
+    }
+
+    .index-text {
+        padding-top: 85%;
+        font-size: 16px;
     }
 }
