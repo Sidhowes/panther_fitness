@@ -1,103 +1,84 @@
-{% extends "base.html" %}
-{% load static %}
-
-{% block page_header %}
-    <div class="container">
-        <div class="row">
-            <div class="col"></div>
+{% extends "base.html" %} {% load static %} {% block page_header %}
+<div class="container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %} {% block content %}
+<div class="overlay"></div>
+<div class="product-detail-container">
+    <div class="row">
+        <div class="col-12">
+            <a href="{% url 'products' %}" class="arrow-icon">
+                <i class="fas fa-arrow-left">Back to shopping</i>
+            </a>
         </div>
     </div>
-{% endblock %}
-
-{% block content %}
-    <div class="overlay"></div>
-    <div class="product-detail-container">
-        <div class="row">
-            <div class="col-12">
-                <a href="{% url 'products' %}" class="arrow-icon">
-                    <i class="fas fa-arrow-left">Back to shopping</i>
-                </a>
-            </div>
-        </div>
-        <div class="row card-panel">
-            <div class="col m7">
-                {% if product.image %}
-                    <a href="{{ product.image.url }}" target="_blank">
-			            <img class="img-detail" src="{{ product.image.url }}" alt="{{ product.name }}"/>
-			        </a>
-                {% else %}
-                    <a href="#">
-				        <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}"/>
-				    </a>
-                {% endif %} 
-            </div>
-            {% if request.user.is_superuser %}
-                <small style="padding-left: 10px;">
-                    <a class="black-text" href="{% url 'edit_product' product.id %}">Edit</a> | 
-                    <a class="red-text" href="{% url 'delete_product' product.id %}">Delete</a>
-                </small>
+    <div class="row card-panel">
+        <div class="col m7">
+            {% if product.image %}
+            <a href="{{ product.image.url }}" target="_blank">
+                <img class="img-detail" src="{{ product.image.url }}" alt="{{ product.name }}" />
+            </a>
+            {% else %}
+            <a href="#">
+                <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}" />
+            </a>
             {% endif %}
-            <div class="col m5">
-                <h3 class="black-text darken-4">{{ product.name }}</h3>
-                <p>
-                    {% if product.rating %}
-                        <small class="text-muted"><i class="fas fa-star"></i>{{ product.rating }} / 5</small>
-                    {% else %}
-                        <small class="text-muted">No Rating</small>
-                    {% endif %}
-                </p>
-                <p>{{ product.description }}</p>
-                {% if product.category %}
-                <p class="cat-tag">
-                    <a class="text-muted black-text" href="{% url 'products' %}?category={{ product.category.name }}">
-                        <i class="fas fa-tag"></i>{{ product.category.friendly_name }}
-                    </a>
-                </p>
+        </div>
+        {% if request.user.is_superuser %}
+        <small style="padding-left: 10px;">
+            <a class="black-text" href="{% url 'edit_product' product.id %}">Edit</a> |
+            <a class="red-text" href="{% url 'delete_product' product.id %}">Delete</a>
+        </small>
+        {% endif %}
+        <div class="col m5">
+            <h3 class="black-text darken-4">{{ product.name }}</h3>
+            <p>
+                {% if product.rating %}
+                <small class="text-muted"><i class="fas fa-star"></i>{{ product.rating }} / 5</small>
+                {% else %}
+                <small class="text-muted">No Rating</small>
                 {% endif %}
-                <h4>£{{ product.price }}</h4>
-                <form class="form" action="{% url 'add_to_cart' product.id %}" method="POST">
-                     {% csrf_token %}
-                            {% with product.has_sizes as s %}
-                            {% if s %}
-                                <div class="input-field col s12" style="width: 75%;">
-                                <p>Size:</p>
-                                    <select name="product_size" id="id_product_size">
-                                        <option value="xs">XS</option>
-                                        <option value="s">S</option>
-                                        <option value="m" selected>M</option>
-                                        <option value="l">L</option>
-                                        <option value="xl">XL</option>
-                                    </select>
-                                </div>
-                            {% endif %}
-                            <div class="col s12" style="width: 75%;">
-                                <p>Quantity</p>
-                                    <div class="input-field decrement-qty"
-                                            data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}">
-                                    </div>
-                                    <input class="form-control qty_input" type="number" name="quantity" 
-                                        value="1" min="1" max="99" data-item_id="{{ product.id }}" 
-                                        id="id_qty_{{ product.id }}">
-                                    <div class="input-field increment-qty"
-                                            data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
-                                    </div>
-                            </div>
-                            <div class="col s12">
-                                <input type="submit" class="btn btn-cart" value="Add to Cart">
-                            </div>
-                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                            {% endwith %}
-                </form>
-            </div>
+            </p>
+            <p>{{ product.description }}</p>
+            {% if product.category %}
+            <p class="cat-tag">
+                <a class="text-muted black-text" href="{% url 'products' %}?category={{ product.category.name }}"> <i class="fas fa-tag"></i>{{ product.category.friendly_name }} </a>
+            </p>
+            {% endif %}
+            <h4>£{{ product.price }}</h4>
+            <form class="form" action="{% url 'add_to_cart' product.id %}" method="POST">
+                {% csrf_token %} {% with product.has_sizes as s %} {% if s %}
+                <div class="input-field col s12" style="width: 75%;">
+                    <p>Size:</p>
+                    <select name="product_size" id="id_product_size">
+                        <option value="xs">XS</option>
+                        <option value="s">S</option>
+                        <option value="m" selected>M</option>
+                        <option value="l">L</option>
+                        <option value="xl">XL</option>
+                    </select>
+                </div>
+                {% endif %}
+                <div class="col s12" style="width: 75%;">
+                    <p>Quantity</p>
+                    <div class="input-field decrement-qty" data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}"></div>
+                    <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}" />
+                    <div class="input-field increment-qty" data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}"></div>
+                </div>
+                <div class="col s12">
+                    <input type="submit" class="btn btn-cart" value="Add to Cart" />
+                </div>
+                <input type="hidden" name="redirect_url" value="{{ request.path }}" />
+                {% endwith %}
+            </form>
         </div>
     </div>
-    
-{% endblock %}
+</div>
 
-{% block postloadjs %}
-    <script type="text/javascript">
-            $('select').formSelect();
-    </script>
-{{ block.super }}
-{% include 'products/includes/quantity_input_script.html' %}
-{% endblock %}
+{% endblock %} {% block postloadjs %}
+<script type="text/javascript">
+    $("select").formSelect();
+</script>
+{{ block.super }} {% include 'products/includes/quantity_input_script.html' %} {% endblock %}

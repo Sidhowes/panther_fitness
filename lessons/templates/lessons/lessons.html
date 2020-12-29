@@ -1,73 +1,80 @@
-{% extends "base.html" %}
-{% load static %}
-
-{% block page_header %}
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h2 class="red-text darken-4 center-align">Fitness Lesson</h2>
-            </div>
+{% extends "base.html" %} {% load static %} {% block page_header %}
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h2 class="red-text darken-4 center-align">Fitness Lesson</h2>
         </div>
     </div>
-{% endblock %}
-
-{% block content %}
-    <div class="overlay"></div>
-        <div class="container">
-            <div class="row card-panel">
-               {% for lesson in lessons %}
-                    <div class="col s12">
-                        <div>
-                            {% if lesson.image %}
-                            <div class="card-image-fit">
-                                <img class="img-fit" style="width: 100%;" src="{{ lesson.image.url }}" alt="{{ lesson.programme_duration }}"/>
-                            {% else %}
-                                <img src="{{ MEDIA_URL }}noimage.png" alt="{{ lesson.programme_duration }}"/>
-                            {% endif %}
-                            </div>
-                            <div class="col s12">
-                                <p><strong class="red-text darken-4"><em>Monday Lesson</em></strong>
-                                    <br>
-                                {{ lesson.day_1 }}</p>
-                            </div>
-                            <div class="col s12">
-                                <p><strong class="red-text darken-4"><em>Tuesday Lesson</em></strong>
-                                    <br>
-                                {{ lesson.day_2 }}</p>
-                            </div>
-                            <div class="col s12">
-                                <p><strong class="red-text darken-4"><em>Wednesday Lesson</em></strong>
-                                    <br>
-                                {{ lesson.day_3 }}</p>
-                            </div>
-                            <div class="col s12">
-                                <p><strong class="red-text darken-4"><em>Thursday Lesson</em></strong>
-                                    <br>
-                                {{ lesson.day_4 }}</p>
-                            </div>
-                            <div class="col s12">
-                                <p><strong class="red-text darken-4"><em>Friday Lesson</em></strong>
-                                    <br>
-                                {{ lesson.day_5 }}</p>
-                            </div>
-                            <div class="col s12">
-                                <p><strong class="red-text darken-4"><em>Saturday Lesson</em></strong>
-                                    <br>
-                                {{ lesson.day_6 }}</p>
-                            </div>
-                            <div class="col s12">
-                                <p><strong class="red-text darken-4"><em>Sunday Lesson</em></strong>
-                                    <br>
-                                {{ lesson.day_7 }}</p>
-                            </div>
-                            {% if request.user.is_superuser %}
-                                <small>
-                                    <a class="black-text" href="{% url 'edit_lesson' lesson.id %}">Edit</a> | 
-                                </small>
-                            {% endif %}
-                        </div>
-                    </div>
-                {% endfor %}
+</div>
+{% endblock %} {% block content %}
+<div class="overlay"></div>
+<div class="container">
+    <div class="row card-panel">
+        {% for lesson in lessons %}
+        <div class="col s12">
+            <div>
+                {% if lesson.image %}
+                <div class="card-image-fit">
+                    <img class="img-fit" style="width: 100%;" src="{{ lesson.image.url }}" alt="{{ lesson.programme_duration }}" />
+                    {% else %}
+                    <img src="{{ MEDIA_URL }}noimage.png" alt="{{ lesson.programme_duration }}" />
+                    {% endif %}
+                </div>
+                <div class="col s12">
+                    <p>
+                        <strong class="red-text darken-4"><em>Monday Lesson</em></strong>
+                        <br />
+                        {{ lesson.day_1 }}
+                    </p>
+                </div>
+                <div class="col s12">
+                    <p>
+                        <strong class="red-text darken-4"><em>Tuesday Lesson</em></strong>
+                        <br />
+                        {{ lesson.day_2 }}
+                    </p>
+                </div>
+                <div class="col s12">
+                    <p>
+                        <strong class="red-text darken-4"><em>Wednesday Lesson</em></strong>
+                        <br />
+                        {{ lesson.day_3 }}
+                    </p>
+                </div>
+                <div class="col s12">
+                    <p>
+                        <strong class="red-text darken-4"><em>Thursday Lesson</em></strong>
+                        <br />
+                        {{ lesson.day_4 }}
+                    </p>
+                </div>
+                <div class="col s12">
+                    <p>
+                        <strong class="red-text darken-4"><em>Friday Lesson</em></strong>
+                        <br />
+                        {{ lesson.day_5 }}
+                    </p>
+                </div>
+                <div class="col s12">
+                    <p>
+                        <strong class="red-text darken-4"><em>Saturday Lesson</em></strong>
+                        <br />
+                        {{ lesson.day_6 }}
+                    </p>
+                </div>
+                <div class="col s12">
+                    <p>
+                        <strong class="red-text darken-4"><em>Sunday Lesson</em></strong>
+                        <br />
+                        {{ lesson.day_7 }}
+                    </p>
+                </div>
+                {% if request.user.is_superuser %}
+                <small> <a class="black-text" href="{% url 'edit_lesson' lesson.id %}">Edit</a> | </small>
+                {% endif %}
             </div>
-        </div>  
+        </div>
+        {% endfor %}
+    </div>
+</div>
 {% endblock %}

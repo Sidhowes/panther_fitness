@@ -3,11 +3,11 @@ html {
 }
 
 body {
-    background: url('../media/background-image.jpeg') no-repeat center center fixed;
+    background: url("../media/background-image.jpeg") no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 200px);
     color: #000000;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 18px;
 }
 
@@ -74,13 +74,12 @@ nav .brand-logo {
 }
 
 .btn {
-    background-color: #B71C1C;
-    
+    background-color: #b71c1c;
 }
 
 .btn:hover {
     color: #000;
-    background-color: #B71C1C;
+    background-color: #b71c1c;
 }
 
 .btn-black {
@@ -88,13 +87,13 @@ nav .brand-logo {
 }
 
 .btn-black:hover {
-    color: #B71C1C;
+    color: #b71c1c;
     background-color: #000;
 }
 
 input {
     background-color: transparent;
-    border: 1px solid #B71C1C;
+    border: 1px solid #b71c1c;
     border-radius: 0;
     outline: none;
     height: 34px;
@@ -106,7 +105,8 @@ input {
     box-sizing: content-box;
 }
 
-.dropdown-content li>a, .dropdown-content li>span {
+.dropdown-content li > a,
+.dropdown-content li > span {
     color: #000;
 }
 
@@ -145,7 +145,7 @@ input {
     cursor: pointer;
 }
 
-input[name='q']::placeholder {
+input[name="q"]::placeholder {
     color: #aab7c4;
 }
 
@@ -200,8 +200,8 @@ input[name='q']::placeholder {
 /* Allauth form formatting */
 
 .allauth-form-inner-content p {
-    margin-top: 1.5rem; 
-    color: #6c757d; 
+    margin-top: 1.5rem;
+    color: #6c757d;
 }
 
 .allauth-form-inner-content input {
@@ -209,7 +209,7 @@ input[name='q']::placeholder {
     border-radius: 0;
 }
 
-.allauth-form-inner-content label:not([for='id_remember']) {
+.allauth-form-inner-content label:not([for="id_remember"]) {
     display: none;
 }
 
@@ -218,9 +218,9 @@ input[name='q']::placeholder {
 }
 
 .allauth-form-inner-content button,
-.allauth-form-inner-content input[type='submit'] {
-	/* btn */
-	display: inline-block;
+.allauth-form-inner-content input[type="submit"] {
+    /* btn */
+    display: inline-block;
     font-weight: 400;
     color: #fff;
     text-align: center;
@@ -231,23 +231,23 @@ input[name='q']::placeholder {
     user-select: none;
     background-color: #000;
     border: 1px solid #000;
-    padding: .375rem .75rem;
+    padding: 0.375rem 0.75rem;
     font-size: 1rem;
     line-height: 1.5;
     border-radius: 0;
 }
 
 .allauth-form-inner-content button:hover,
-.allauth-form-inner-content input[type='submit']:hover {	
-	color: #B71C1C;
+.allauth-form-inner-content input[type="submit"]:hover {
+    color: #b71c1c;
     background-color: #000;
 }
 
-.allauth-form-inner-content  {
-	color: #17a2b8;
+.allauth-form-inner-content {
+    color: #17a2b8;
 }
 
-.input-field>label {
+.input-field > label {
     top: -40px;
     position: static;
 }
@@ -272,7 +272,7 @@ input[name='q']::placeholder {
     border-color: #dc3545;
 }
 
-.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
     background-color: #dc3545;
     border-color: #dc3545;
     border-radius: 0;
@@ -332,7 +332,7 @@ input[name='q']::placeholder {
 
 @media only screen and (max-width: 400px) {
     .brand-logo {
-        height: 55px;  
+        height: 55px;
     }
 
     .sort-btn {
