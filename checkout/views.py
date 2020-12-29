@@ -154,24 +154,6 @@ def checkout_success(request, order_number):
         order.user_profile = profile
         order.save()
 
-        current_cart = cart_contents(request)
-        cart_items = current_cart['cart_items']
-        has_programme = False
-        for item in cart_items:
-            cat = item['category']
-            if str(cat) == 'memberships':
-                user_has_programme = True
-                profile = UserProfile.objects.get(user=request.user)
-                form_database_sub = {
-                    'has_programme': user_has_programme,
-                }
-
-                order_form_ = UserProfileForm(form_database_sub,
-                                              instance=profile)
-                if order_form_.is_valid():
-                    if order_form_.is_valid():
-                        order_form_.save()
-
         # Save the user's info
         if save_info:
             profile_data = {
