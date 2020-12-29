@@ -17,7 +17,7 @@ def check_user(request):
         orders = profile.orders.all()
         for order in orders:
             line_items = order.lineitems.all()
-            for item in line_items :
+            for item in line_items:
                 if item.product.name == 'Fitness Programme':
                     return True
         return False

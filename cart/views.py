@@ -5,6 +5,7 @@ from products.models import Product
 
 # Create your views here.
 
+
 def view_cart(request):
     """ A view that renders the cart contents. """
 
@@ -28,7 +29,7 @@ def add_to_cart(request, item_id):
                 cart[item_id]['items_by_size'][size] += quantity
                 messages.success(request, f'Updated size {size.upper()} {product.name} quantity to {cart[item_id]["items_by_size"][size]}')
             else:
-                cart[item_id]['items_by_size'][size]  = quantity
+                cart[item_id]['items_by_size'][size] = quantity
                 messages.success(request, f'Added size {size.upper()} {product.name} to your cart')
         else:
             cart[item_id] = {'items_by_size': {size: quantity}}

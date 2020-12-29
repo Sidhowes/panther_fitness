@@ -2,6 +2,7 @@ from django import forms
 from .models import Lesson
 from .widgets import CustomClearableFileInput1
 
+
 class LessonProgrammeForm(forms.ModelForm):
 
     class Meta:
