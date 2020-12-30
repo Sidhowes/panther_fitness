@@ -10,9 +10,9 @@ to a membership programme.
 
 
 ### Admin Account 
-* Email: Admin@hotmail.com
-* Username: admin
-* Password: Admintest12
+* Email: sidhowes@mail.com
+* Username: sidhowes
+* Password: Howsey12
 
 
 ## Device Viewings
