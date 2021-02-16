@@ -9,10 +9,6 @@ to a membership programme.
 [Visit deployed site](https://sid-howes-panther-fitness.herokuapp.com/)
 
 
-### Admin Account 
-* Email: sidhowes@mail.com
-* Username: sidhowes
-* Password: Howsey12
 
 
 ## Device Viewings
